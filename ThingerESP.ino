@@ -24,10 +24,10 @@ void setup() {
   dht.begin();  
 
   /* Envia a humidade */
-  thing["Humidade"] >> outputValue(dht.readTemperature());
+  thing["Humidade"] >> outputValue(dht.readHumidity());
 
   /* Envia a temperatura */
-  thing["Temperatura"] >> outputValue(dht.readHumidity());
+  thing["Temperatura"] >> outputValue(dht.readTemperature());
 }
 
 void loop() {
